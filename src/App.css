@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #1B98F5;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading {
+    margin-top: 2%;
 }
-
-.App-link {
-  color: #61dafb;
+.heading h1 {
+    font-size: 3rem;
+    color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+    width: 50%;
+}
+input, button {
+    margin-top: 2%;
+    width: 100%;
+    font-size: 2rem;
+    padding:5px 10px;
+    border: none;
+    border-radius: 0px;
+}
+button {
+    background-color: #4DD637;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.output {
+    width: 50%;
+}
+.card {
+    margin-top: 2%;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 0px;
+}
+.lead {
+    font-size: 2rem;
+}
+.buttons {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.bi-pen {
+    color: blue;
+}
+.bi-trash {
+    color: red;
+}
+@media (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+    .output {
+        width: 100%;
+    }
 }
