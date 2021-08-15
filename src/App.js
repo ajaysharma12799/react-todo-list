@@ -33,15 +33,12 @@ const App = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }
 
-  const editTodo = (e) => {
-
-  }
-
   const deleteTodo = (e) => {
     const newTodos = [...todos];
     console.log(newTodos);
-    let content = e.target.parentElement.parentElement.parentElement.textContent;
+    let content = e.target.parentElement.parentElement.textContent;
     let index = newTodos.findIndex((element) => element === content);
+    console.log(content, index);
     newTodos.splice(index, 1);
     localStorage.setItem("todos", JSON.stringify(newTodos));
     setTodos(newTodos);
@@ -65,7 +62,7 @@ const App = () => {
       <div className="output">
       {
         todos.map((todo, index) => (
-          <Card key={index} todo={todo} deleteTodo={deleteTodo} editTodo={editTodo} />
+          <Card key={index} todo={todo} deleteTodo={deleteTodo} />
         ))
       }
       </div>

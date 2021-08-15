@@ -9,6 +9,7 @@ body {
     background-color: #1B98F5;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 .container {
     display: flex;
@@ -44,27 +45,19 @@ button {
 .output {
     width: 50%;
 }
-.card {
+.todoCard {
     margin-top: 2%;
     padding: 10px 20px;
-    text-align: center;
     width: 100%;
-    border-radius: 0px;
-}
-.lead {
-    font-size: 2rem;
-}
-.buttons {
-    margin-top: 1%;
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
-}
-.bi-pen {
-    color: blue;
+    border-radius: 0px;
+    background-color: #fff;
+    animation: SlideIn 0.5s ease-in;
 }
 .bi-trash {
     color: red;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
     .form {
@@ -73,4 +66,17 @@ button {
     .output {
         width: 100%;
     }
+}
+
+@keyframes SlideIn {
+    0% {
+        transform: translateX(-500px);
+    }
+    30% {
+        transform: translateX(0px);
+    }   
+    50% {
+        transform: translateX(30px);
+    }
+    100% {}
 }
